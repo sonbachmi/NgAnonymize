@@ -1,6 +1,18 @@
 {
   "name": "ng-anonymize",
   "version": "0.1.0",
+  "keywords": [
+    "angular",
+    "anonymize",
+    "typescript",
+    "javascript"
+  ],
+  "author": "Son Nguyen",
+  "homepage": "https://github.com/bachmi/NgAnonymize",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/bachmi/NgAnonymize.git"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
