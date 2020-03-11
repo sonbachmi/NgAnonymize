@@ -1,0 +1,78 @@
+body {
+  /*font-size: 120% !important;*/
+}
+
+.view-github-icon {
+  margin-right: 10px;
+}
+
+.anonymize-intro {
+  max-width: 40em;
+}
+
+.anonymize-testbench {
+  margin: 1rem 0;
+  text-align: center;
+}
+form {
+  max-width: 30em;
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 0 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.form-group > * {
+  /*padding: .4rem 1rem;*/
+  width: 100%;
+}
+
+label {
+  padding: 1rem 0;
+}
+.form-notes {
+  margin: 10px 1rem;
+}
+.form-group input[type="text"] {
+  font-size: 200%;
+  padding: 1rem;
+  text-align: center;
+}
+.form-group.input-data {
+  text-align: center;
+}
+
+.output-panel {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.output-item {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 4px 0;
+}
+.output-label {
+  width: 50%;
+  margin-right: 2em;
+  text-align: right;
+}
+.bleed-input {
+  width: 3em;
+  margin-left: 1em;
+  text-align: center;
+
+}
+.output-value {
+  color: #1976d2;
+  font-weight: bold;
+  font-size: 120%;
+}
+
+.anonymize-instructions {
+  max-width: 40em;
+}
