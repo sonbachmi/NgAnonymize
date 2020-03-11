@@ -1,2 +1,2 @@
 # NgAnonymize
-Data anonymization using Angular 2+
+Data anonymization library using Angular 2
