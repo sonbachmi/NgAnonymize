@@ -1,11 +1,17 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import {BrowserModule} from "@angular/platform-browser";
+import {NgAnonymizeModule} from "./ng-anonymize.module";
+import {FormsModule} from "@angular/forms";
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent
+      ],
+      imports: [
+        NgAnonymizeModule,
       ],
     }).compileComponents();
   }));
@@ -16,16 +22,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'NgAnonymize'`, () => {
+  it(`should define list of 4 methods`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('NgAnonymize');
+    expect(app.methods.length).toEqual(4);
   });
 
-  it('should render title', () => {
+  it('demo should render default values for John Doe', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('NgAnonymize app is running!');
+    expect(compiled.querySelector('.output-value').textContent.length).toEqual(8);
   });
 });
