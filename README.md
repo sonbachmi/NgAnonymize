@@ -1,7 +1,7 @@
 # NgAnonymize aka ng-anonymize
 Data anonymization library using Angular
 
-View demo at [Official Project Website](https://son.bachmi.com/ngAnonymize)
+View demo at [Official Project Website](https://nganon.bachmi.com)
 
 **Data Anonymization** is the process to encrypt or obfuscate sensitive data into a temporary representation that is unrecognizable from the original data, while still preserving certain statistical characteristics as close to the original as possible. The anonymized dataset can then still be processed as meaningful data, or stored and transmitted safely, without exposing the real data. Data anonymization is aimed to protect personal privacy and is required by certain data protection laws like GDPR.
 
