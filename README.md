@@ -11,7 +11,7 @@ Initially _NgAnonymize_ offers four anonymization methods (or algorithms) that s
 
 - **Randomize** (default) replaces each character with a random value. This is not trivial, as care must be made to preserve similar characteristics: letter by letter only, keeping the same case, and number by number only. A special case is for phone numbers, where the first portion of the data (the country code) should be preserved.
 
-- **Shuffle** randomly swaps positions of all characters. The same restrictions above also apply, regarding preserving characteristics and phone codes. This represents the most fidelity for the anonymized data as it preserves the set of data characters.
+- **Shuffle** randomly swaps positions of all characters. In addition to the same restrictions above, care must be taken to preserve the pattern of the data, such as to make sure at a certain position, a letter is always replaced by a letter, and likewise for numbers and symbols. This represents the best fidelity for the anonymized data as it preserves the set of data characters.
 
 - **First** reveals only the first few characters, masking the rest. Suitable for postal addresses.
 

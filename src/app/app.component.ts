@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {AnonymizeMethods, DEFAULT_LEFT_BLEED, DEFAULT_RIGHT_BLEED} from "./models/anonymize.models";
 import Prism from 'prismjs';
 
-Prism;
+Prism;  // Dummy code to prevent tree-shaking
 
 @Component({
   selector: 'app-root',
@@ -11,10 +11,10 @@ Prism;
 })
 export class AppComponent {
   methods = AnonymizeMethods;
-  inputData = 'John Doe';
   leftBleed = DEFAULT_LEFT_BLEED;
   rightBleed = DEFAULT_RIGHT_BLEED;
-  constructor() {
+  inputData = 'John Doe';
 
+  constructor() {
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "ng-anonymize",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "keywords": [
     "angular",
     "anonymize",
@@ -8,7 +8,7 @@
     "javascript"
   ],
   "author": "Son Nguyen",
-  "homepage": "https://github.com/sonbachmi/NgAnonymize",
+  "homepage": "https://nganon.bachmi.com",
   "repository": {
     "type": "git",
     "url": "https://github.com/sonbachmi/NgAnonymize.git"
