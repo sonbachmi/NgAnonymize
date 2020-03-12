@@ -1,8 +1,6 @@
-import { TestBed, async } from '@angular/core/testing';
-import { AppComponent } from './app.component';
-import {BrowserModule} from "@angular/platform-browser";
+import {async, TestBed} from '@angular/core/testing';
+import {AppComponent} from './app.component';
 import {NgAnonymizeModule} from "./ng-anonymize.module";
-import {FormsModule} from "@angular/forms";
 
 describe('AppComponent', () => {
   beforeEach(async(() => {

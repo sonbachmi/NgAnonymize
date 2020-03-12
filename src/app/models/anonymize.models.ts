@@ -6,7 +6,7 @@ export const DEFAULT_MASK_CHAR = '*';
 export const DEFAULT_LEFT_BLEED = 3;
 export const DEFAULT_RIGHT_BLEED = 4;
 
-/* Implemented anonymization methods.
+/* List of implemented anonymization methods.
 For more details, see documentation
  */
 export enum AnonymizeMethod {
