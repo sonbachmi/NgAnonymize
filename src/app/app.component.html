@@ -356,30 +356,27 @@
   </div>
 
   <div class="anonymize-intro">
-    <p><strong>Data Anonymization</strong> is the process to encrypt or obfuscate data into a temporary representation
-      that is unrecognizable from the original data, while still preserving certain
-      statistical characteristics as close to the original as possible, so that the representation can still be
-      processed as meaningful data without exposing the real data.
+    <p><strong>Data Anonymization</strong> is the process to encrypt or obfuscate sensitive data into a temporary representation
+      that is unrecognizable from the original data, while still preserving certain statistical characteristics as close to the original as possible.
+      The anonymized dataset can then still be processed as meaningful data, or stored and transmitted safely, without exposing the real data.
       Data anonymization is aimed to protect personal privacy and is required by certain data protection laws like GDPR.
     </p>
     <p>NgAnonymize is a small Angular 2+ library that offers basic anonymization functions for use in data applications
       where privacy protection is a concern. It was created as a result of relative few
       open source solutions that exist for this purpose.</p>
     <p>Initially NgAnonymize offers four anonymization methods (or algorithms) that should be sufficient for most basic
-      usage. Note that these functions only operate on letters and numbers;
+      usage, though extension has been planned. Note that these functions only operate on letters and numbers;
       other symbols are left as is.</p>
     <ul>
-      <li><strong>Randomize</strong> (default): replace each character with a random value. This is not trivial, as care
+      <li><strong>Randomize</strong> (default) replaces each character with a random value. This is not trivial, as care
         must be made to preserve similar characteristics: letter by letter only, keeping the same case,
         and number by number only. A special case is for phone numbers, where the first portion of
-        the number (the area code) should be preserved.
+        the data (the country code) should be preserved.
       </li>
-      <li><strong>Shuffle</strong>: randomly swap positions of all characters. The same restrictions above also apply,
-        regarding preserving characteristics and phone area codes. This represents the best
-        value for the anonymized data as it preserves the set of data characters.
-      <li><strong>First</strong>: reveal only the first few characters, masking the rest. Suitable for postal addresses.
-      <li><strong>Last</strong>: reveal only the last few characters, masking the rest. Suitable for credit card
-        numbers.
+      <li><strong>Shuffle</strong> randomly swaps positions of all characters. The same restrictions above also apply,
+        regarding preserving characteristics and phone codes. This represents the most fidelity for the anonymized data as it preserves the set of data characters.
+      <li><strong>First</strong> reveals only the first few characters, masking the rest. Suitable for postal addresses.
+      <li><strong>Last</strong> reveals only the last few characters, masking the rest. Suitable for credit card numbers.
     </ul>
   </div>
 
@@ -428,7 +425,7 @@
     <p>Use the <code>anonymize</code> pipe to display anonymized data</p>
     <pre><code class="language-js">
       &lt;div>
-        {{originalText | anonymize : [method] : [options?]}<!---->}
+        {{ originalText | anonymize : [method?] : [options?] }<!---->}
       &lt;/div>
       </code></pre>
     <p>Typical example:</p>
@@ -436,15 +433,13 @@
       &lt;div>{{'John Doe' | anonymize:'shuffle'}<!---->}&lt;/div>
       </code></pre>
 
-    <p>For more details and instructions, refer to the documentation.</p>
-    <p>You can also view source code of this page including the demo which is part of the projects, as an example of how
-      to use the library.</p>
+    <p>You can customize anonymization by passing parameters to the pipe. For more details and instructions, refer to the <a href="https://github.com/sonbachmi/NgAnonymize" documentation.</p>
 
   </div>
 
   <!-- Footer -->
   <footer>
-    NgAnonymize useful?&nbsp;
+    Find NgAnonymize useful?&nbsp;
     <a href="https://github.com/sonbachmi/NgAnonymize" target="_blank" rel="noopener"> Give our repo a star.
       <div class="github-star-badge">
         <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
