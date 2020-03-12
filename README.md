@@ -17,7 +17,7 @@ Initially _NgAnonymize_ offers four anonymization methods (or algorithms) that s
 
 - **Last** reveals only the last few characters, masking the rest. Suitable for credit card numbers.
 
-Get Started
+### Get Started
 
 Clone the project from GitHub, or install the NPM module into your Angular application.
 
@@ -43,4 +43,36 @@ Typical example:
 
       <div>{{'John Doe' | anonymize:'shuffle'}}</div>
       
-You can also view source code of this page including the demo which is part of the projects, as an example of how to use the library.
+You can also use the function programmatically in code:
+
+    import {AnonymizePipe} from './anonymize.pipe';
+    
+    const anonymize = new AnonymizePipe().transform;
+    const outputData = anonymize(inputData, 'first', 
+                { bleed: 4 } );
+
+Either way, you can customize anonymization behavior by passing parameters as follows.
+
+### Reference
+
+The pipe accepts two optional parameters:
+
+- **`method`**:` string` selects the anonymization method, can be either `'randomize'` (default), `'shuffle'`, `'first'` or `'last'`.
+
+- **`options`**`: AnonymizePipeOptions` specifies additional settings in the following shape:
+
+~~~~
+    {
+      bleed?: number,
+      mask?: string,
+      type?: string;
+    }`
+~~~~    
+
+-- **`bleed`**: the number of characters to reveal for masking methods (`first` and `last`). Default values are 3 for first and 4 for last.
+
+-- **`mask`**: the character to use as mask. Default is `*`.
+
+-- **`type`**: specifies type of the data. Currently only one value is supported: `'phone'` treats input data as phone number and tries to preserve (do not transform) the country code (so it stays as valid data). Currently the logic is very simple and only preserves the first few characters. The default number of characters to keep is hard coded as 3. Todo: smarter detection of country codes.
+
+This completes the documentation. You can also view source code of the project page including the demo which is part of the project, as an example of how to use the library.
