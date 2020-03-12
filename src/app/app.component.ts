@@ -7,7 +7,7 @@ Prism;
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./home.css', './app.component.css']
 })
 export class AppComponent {
   methods = AnonymizeMethods;
