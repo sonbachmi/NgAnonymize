@@ -17,16 +17,7 @@ Moved all inline styles to separate CSS file
 </svg>
   <span>Angular Data Anonymization</span>
   <div class="spacer"></div>
-  <!--
-    <a aria-label="Angular on twitter" target="_blank" rel="noopener" href="https://twitter.com/angular" title="Twitter">
-      <svg id="twitter-logo" height="24" data-name="Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
-        <rect width="400" height="400" fill="none"/>
-        <path
-          d="M153.62,301.59c94.34,0,145.94-78.16,145.94-145.94,0-2.22,0-4.43-.15-6.63A104.36,104.36,0,0,0,325,122.47a102.38,102.38,0,0,1-29.46,8.07,51.47,51.47,0,0,0,22.55-28.37,102.79,102.79,0,0,1-32.57,12.45,51.34,51.34,0,0,0-87.41,46.78A145.62,145.62,0,0,1,92.4,107.81a51.33,51.33,0,0,0,15.88,68.47A50.91,50.91,0,0,1,85,169.86c0,.21,0,.43,0,.65a51.31,51.31,0,0,0,41.15,50.28,51.21,51.21,0,0,1-23.16.88,51.35,51.35,0,0,0,47.92,35.62,102.92,102.92,0,0,1-63.7,22A104.41,104.41,0,0,1,75,278.55a145.21,145.21,0,0,0,78.62,23"
-          fill="#fff"/>
-      </svg>
-    </a>
-  -->
+
 </div>
 
 <div class="content" role="main">
@@ -45,7 +36,7 @@ Moved all inline styles to separate CSS file
 	s1-0.447,1-1v-2.184C31.163,41.903,32,40.804,32,39.5z"/>
 </svg>
 
-    <span>NgAnonymize aka ng-anonymize</span>
+    <span>NgAnonymize</span>
 
   </div>
 
@@ -64,6 +55,14 @@ Moved all inline styles to separate CSS file
       <span>View on GitHub</span>
 
       <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+      </svg>
+    </a>
+    <a class="card" href="#demo">
+      <svg class="demo-link-icon" enable-background="new 0 0 512.005 512.005" height="20" viewBox="0 0 512.005 512.005" width="20" xmlns="http://www.w3.org/2000/svg"><g><path d="m509.16 247.21c-53.07-73.37-154.42-156.21-253.16-156.21-97.9 0-199.22 81.64-253.16 156.21-3.79 5.25-3.79 12.33 0 17.58 53.07 73.37 154.42 156.21 253.16 156.21 97.9 0 199.22-81.64 253.16-156.21 3.79-5.25 3.79-12.33 0-17.58zm-253.16 113.79c-57.9 0-105-47.1-105-105s47.1-105 105-105 105 47.1 105 105-47.1 105-105 105z"/><g><path d="m15.003 151.003c-8.284 0-15-6.716-15-15v-60c0-8.284 6.716-15 15-15h60c8.284 0 15 6.716 15 15s-6.716 15-15 15h-45v45c0 8.284-6.716 15-15 15z"/></g><g><path d="m497.003 151.003c-8.284 0-15-6.716-15-15v-45h-45c-8.284 0-15-6.716-15-15s6.716-15 15-15h60c8.284 0 15 6.716 15 15v60c0 8.284-6.716 15-15 15z"/></g><g><path d="m75.003 451.003h-60c-8.284 0-15-6.716-15-15v-60c0-8.284 6.716-15 15-15s15 6.716 15 15v45h45c8.284 0 15 6.716 15 15s-6.716 15-15 15z"/></g><g><path d="m497.003 451.003h-60c-8.284 0-15-6.716-15-15s6.716-15 15-15h45v-45c0-8.284 6.716-15 15-15s15 6.716 15 15v60c0 8.284-6.716 15-15 15z"/></g><path d="m256 181c-41.35 0-75 33.65-75 75s33.65 75 75 75 75-33.65 75-75-33.65-75-75-75zm0 120c-24.81 0-45-20.19-45-45s20.19-45 45-45 45 20.19 45 45-20.19 45-45 45z"/><circle cx="256" cy="256" r="15"/></g></svg>
+      <span>To Demo</span>
+
+      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="transform: rotate(90deg)">
         <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
       </svg>
     </a>
@@ -95,7 +94,7 @@ Moved all inline styles to separate CSS file
     </ul>
   </div>
 
-  <div class="anonymize-testbench">
+  <div id="demo" class="anonymize-testbench">
     <h2>Demo</h2>
     <form class="anonymize-form" ngForm="anonymizeForm">
       <div class="form-group input-data">
@@ -151,7 +150,7 @@ Moved all inline styles to separate CSS file
     <p>You can also use the function programmatically in code:</p>
 
     <pre><code class="language-js">
-      import &#123;AnonymizePipe} from './anonymize.pipe';
+      import &#123;AnonymizePipe} from 'ng-anonymize';
 
       const anonymize = new AnonymizePipe().transform;
       const outputData = anonymize(inputData, 'first',

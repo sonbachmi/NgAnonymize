@@ -7,7 +7,7 @@ View demo at [Official Project Website](https://nganon.bachmi.com)
 
 _NgAnonymize_ is a small Angular 2+ library that offers basic anonymization functions for use in data applications where privacy protection is a concern. It was created as a result of relative few open source solutions that exist for this purpose.
 
-Initially _NgAnonymize_ offers four anonymization methods (or algorithms) that should be sufficient for most basic usage, though extension has been planned. Note that these functions only operate on letters and numbers; other symbols are left as is.
+Initially _NgAnonymize_ offers out of the box four anonymization methods (or algorithms) that should be sufficient for most basic usage, though extension has been planned. Note that these functions only operate on letters and numbers; other symbols are left as is.
 
 - **Randomize** (default) replaces each character with a random value. This is not trivial, as care must be made to preserve similar characteristics: letter by letter only, keeping the same case, and number by number only. A special case is for phone numbers, where the first portion of the data (the country code) should be preserved.
 
@@ -45,7 +45,7 @@ Typical example:
       
 You can also use the function programmatically in code:
 
-    import {AnonymizePipe} from './anonymize.pipe';
+    import {AnonymizePipe} from 'ng-anonymize';
     
     const anonymize = new AnonymizePipe().transform;
     const outputData = anonymize(inputData, 'first', 
