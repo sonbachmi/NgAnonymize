@@ -1,0 +1,23 @@
+{
+  "name": "ng-anonymize",
+  "version": "0.1.7",
+  "keywords": [
+    "angular",
+    "data-anonymization", "anonymize", "anonymization",
+    "privacy-protection", "gdpr",
+    "typescript", "javascript"
+
+  ],
+  "author": "Son Nguyen",
+  "homepage": "https://nganon.bachmi.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sonbachmi/NgAnonymize.git"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "@angular/common": "^9.0.5",
+    "@angular/core": "^9.0.5",
+    "tslib": "^1.10.0"
+  }
+}

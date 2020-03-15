@@ -1,11 +1,13 @@
 {
-  "name": "ng-anonymize",
+  "name": "ng-anonymize-app",
   "version": "0.1.5",
   "keywords": [
     "angular",
+    "data-anonymization",
     "anonymize",
-    "typescript",
-    "javascript"
+    "anonymization",
+    "privacy-protection",
+    "gdpr"
   ],
   "author": "Son Nguyen",
   "homepage": "https://nganon.bachmi.com",
@@ -13,10 +15,11 @@
     "type": "git",
     "url": "https://github.com/sonbachmi/NgAnonymize.git"
   },
+  "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -30,13 +33,15 @@
     "@angular/platform-browser": "~9.0.5",
     "@angular/platform-browser-dynamic": "~9.0.5",
     "@angular/router": "~9.0.5",
+    "ng-anonymize": "^0.1.6",
     "prismjs": "^1.19.0",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.900.5",
+    "@angular-devkit/build-angular": "~0.900.6",
+    "@angular-devkit/build-ng-packagr": "~0.900.5",
     "@angular/cli": "~9.0.5",
     "@angular/compiler-cli": "~9.0.5",
     "@angular/language-service": "~9.0.5",
@@ -51,6 +56,7 @@
     "karma-coverage-istanbul-reporter": "~2.1.0",
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.2",
+    "ng-packagr": "^9.0.0",
     "prettier": "^1.19.1",
     "protractor": "~5.4.3",
     "ts-node": "~8.3.0",

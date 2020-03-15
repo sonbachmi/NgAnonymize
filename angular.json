@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "NgAnonymize": {
+    "NgAnonymizeApp": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/NgAnonymize",
+            "outputPath": "dist/ng-anonymize-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -57,18 +57,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "NgAnonymize:build"
+            "browserTarget": "NgAnonymizeApp:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "NgAnonymize:build:production"
+              "browserTarget": "NgAnonymizeApp:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "NgAnonymize:build"
+            "browserTarget": "NgAnonymizeApp:build"
           }
         },
         "test": {
@@ -98,16 +98,56 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "NgAnonymize:serve"
+            "devServerTarget": "NgAnonymizeApp:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "NgAnonymize:serve:production"
+              "devServerTarget": "NgAnonymizeApp:serve:production"
             }
+          }
+        }
+      }
+    },
+    "NgAnonymize": {
+      "projectType": "library",
+      "root": "projects/ng-anonymize",
+      "sourceRoot": "projects/ng-anonymize/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ng-anonymize/tsconfig.lib.json",
+            "project": "projects/ng-anonymize/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ng-anonymize/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-anonymize/src/test.ts",
+            "tsConfig": "projects/ng-anonymize/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-anonymize/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ng-anonymize/tsconfig.lib.json",
+              "projects/ng-anonymize/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }
     }
   },
-  "defaultProject": "NgAnonymize"
+  "defaultProject": "NgAnonymizeApp"
 }
