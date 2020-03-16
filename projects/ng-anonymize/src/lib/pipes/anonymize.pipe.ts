@@ -2,10 +2,9 @@ import {Pipe, PipeTransform} from '@angular/core';
 import {AnonymizePipeOptions} from "./anonymize.pipe.model";
 import {
   AnonymizeDataType,
+  AnonymizeDefaultValues,
   AnonymizeMethod,
   AnonymizeOptions,
-  DEFAULT_LEFT_BLEED, DEFAULT_MASK_CHAR,
-  DEFAULT_RIGHT_BLEED, PHONE_CC_LENGTH
 } from "../models/anonymize.models";
 
 /* Predefined constants for text processing */
@@ -23,15 +22,15 @@ export class AnonymizePipe implements PipeTransform {
   transform(value: string, method: AnonymizeMethod = AnonymizeMethod.Randomize, options?: AnonymizePipeOptions): string {
     if (!value) return '';
     //  Extract options or default
-    const {type, mask = DEFAULT_MASK_CHAR, bleed} = options as AnonymizeOptions || {};
+    const {type, mask = AnonymizeDefaultValues.MaskChar, bleed} = options as AnonymizeOptions || {};
 
     switch (method) {
       case AnonymizeMethod.First:
         // Replace all but first bleed characters by mask
-        return value.split('').map((c, index) => index < (bleed || DEFAULT_LEFT_BLEED) ? c : mask).join('');
+        return value.split('').map((c, index) => index < (bleed || AnonymizeDefaultValues.LeftReveal) ? c : mask).join('');
       case AnonymizeMethod.Last:
         // Replace all but last  bleed characters by mask
-        return value.split('').map((c, index) => index >= value.length - (bleed || DEFAULT_RIGHT_BLEED) ? c : mask).join('');
+        return value.split('').map((c, index) => index >= value.length - (bleed || AnonymizeDefaultValues.RightReveal) ? c : mask).join('');
       case AnonymizeMethod.Randomize:
         // Replace each character with random value of same character class
         return value.split('').map((c, index) => {
@@ -41,7 +40,7 @@ export class AnonymizePipe implements PipeTransform {
           const charClass = isLowerAlpha ? lowerAlpha : isUpperAlpha ? upperAlpha : isNum ? nums : null;
           if (!charClass) return c;
           if (type === AnonymizeDataType.Phone) {
-            if (index < PHONE_CC_LENGTH) return c;
+            if (index < AnonymizeDefaultValues.PhoneCcLength) return c;
           }
           return charClass[Math.floor(Math.random() * charClass.length)];
         }).join('');
@@ -60,7 +59,7 @@ export class AnonymizePipe implements PipeTransform {
           if (!charClass) return c;
           if (type === AnonymizeDataType.Phone) {
             //  If type = phone, do not transform first 3 characters
-            if (index < PHONE_CC_LENGTH) return c;
+            if (index < AnonymizeDefaultValues.PhoneCcLength) return c;
           }
           let newChar = isNum ? shuffledNums.pop() : shuffledAlpha.pop();
           if (isUpperAlpha) newChar = newChar.toUpperCase();

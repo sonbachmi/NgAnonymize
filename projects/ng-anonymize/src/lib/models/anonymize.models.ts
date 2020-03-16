@@ -1,10 +1,12 @@
 /* Default settings exported for internal only
 Todo: allow consumer to query or set these
  */
-export const PHONE_CC_LENGTH = 3;
-export const DEFAULT_MASK_CHAR = '*';
-export const DEFAULT_LEFT_BLEED = 3;
-export const DEFAULT_RIGHT_BLEED = 4;
+export const AnonymizeDefaultValues = {
+  PhoneCcLength: 3,
+  MaskChar: '*',
+  LeftReveal: 3,
+  RightReveal: 4
+};
 
 /* List of implemented anonymization methods.
 For more details, see documentation

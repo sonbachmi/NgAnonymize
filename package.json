@@ -1,5 +1,6 @@
 {
   "name": "ng-anonymize-app",
+  "description": "Container app for ng-anonymize: data anonymization library for Angular",
   "version": "0.1.5",
   "keywords": [
     "angular",
@@ -19,7 +20,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod",
+    "build": "ng build NgAnonymizeApp --prod",
+    "build:lib": "ng build NgAnonymize --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -33,7 +35,7 @@
     "@angular/platform-browser": "~9.0.5",
     "@angular/platform-browser-dynamic": "~9.0.5",
     "@angular/router": "~9.0.5",
-    "ng-anonymize": "^0.1.6",
+    "ng-anonymize": "^0.1.8",
     "prismjs": "^1.19.0",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",

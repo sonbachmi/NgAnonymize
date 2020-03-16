@@ -1,12 +1,12 @@
 {
   "name": "ng-anonymize",
-  "version": "0.1.7",
+  "description": "Data anonymization library for Angular",
+  "version": "0.1.8",
   "keywords": [
     "angular",
     "data-anonymization", "anonymize", "anonymization",
     "privacy-protection", "gdpr",
     "typescript", "javascript"
-
   ],
   "author": "Son Nguyen",
   "homepage": "https://nganon.bachmi.com",
