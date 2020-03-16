@@ -76,3 +76,5 @@ The pipe accepts two optional parameters:
    -**`type`**: specifies type of the data. Currently only one value is supported: `'phone'` treats input data as phone number and tries to preserve (does not transform) the country code (so it stays as valid data). Currently the logic is very simple and only preserves the first few characters. The default number of characters to keep is hard coded as 3. Todo: smarter anonymization of phone numbers.
 
 This completes the documentation. You can also view source code of the project page including the demo which is part of the project, as an example of how to use the library.
+
+Compatibility Notes: Support for Ivy coming soon. For now you likely need to disable Ivy to use the library.
