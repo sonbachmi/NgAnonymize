@@ -25,31 +25,43 @@ Clone the project from GitHub, or install the NPM module into your Angular appli
 
 Import the module into your app module file:
 
+~~~typescript
     import {NgAnonymizeModule} from "ng-anonymize";
-
-    imports: [
-      ...
-      NgAnonymizeModule,
-      ...
-    ];
+    
+    @NgModule({
+    ...
+        imports: [
+          ...
+          NgAnonymizeModule,
+          ...
+        ]
+    ...
+    })
+~~~
       
 Use the anonymize pipe to display anonymized data
 
+~~~angular2html
       <div>
         {{ originalText | anonymize : [method?] : [options?] }}
       </div>
+~~~
       
 Typical example:
 
+~~~angular2html
       <div>{{'John Doe' | anonymize:'shuffle'}}</div>
+~~~
       
 You can also use the function programmatically in code:
 
+~~~typescript
     import {AnonymizePipe} from 'ng-anonymize';
     
-    const anonymize = new AnonymizePipe().transform;
+    const anonymize:any = new AnonymizePipe().transform;
     const outputData = anonymize(inputData, 'first', 
                 { bleed: 4 } );
+~~~
 
 Either way, you can customize anonymization behavior by passing parameters as follows.
 
@@ -61,12 +73,12 @@ The pipe accepts two optional parameters:
 
 - **`options`**`: AnonymizePipeOptions` specifies additional settings in the following shape:
 
-~~~~
+~~~typescript
     {
       bleed?: number,
       mask?: string,
       type?: string;
-    }`
+    }
 ~~~~    
 
    -**`bleed`**: the number of characters to reveal for masking methods (`first` and `last`). Default values are 3 for `first` and 4 for `last`.
