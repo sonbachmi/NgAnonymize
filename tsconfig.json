@@ -17,8 +17,8 @@
     ],
     "paths": {
       "ng-anonymize": [
-        "dist/ng-anonymize/ng-anonymize",
-        "dist/ng-anonymize"
+        "dist/ng-anonymize",
+        "dist/ng-anonymize/ng-anonymize"
       ]
     }
   },

@@ -20,8 +20,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build NgAnonymizeApp --prod",
-    "build:lib": "ng build NgAnonymize --prod",
+    "build": "ng build ng-anonymize-app --prod",
+    "build:lib": "ng build ng-anonymize --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

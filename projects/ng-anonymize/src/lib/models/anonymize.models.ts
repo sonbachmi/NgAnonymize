@@ -1,5 +1,5 @@
-/* Default settings exported for internal only
-Todo: allow consumer to query or set these
+/* Default settings exposed for readonly query
+Todo: allow consumer to set these
  */
 export const AnonymizeDefaultValues = {
   PhoneCcLength: 3,
@@ -8,7 +8,7 @@ export const AnonymizeDefaultValues = {
   RightReveal: 4
 };
 
-/* List of implemented anonymization methods.
+/* Enum list of implemented anonymization method names.
 For more details, see documentation
  */
 export enum AnonymizeMethod {
@@ -18,7 +18,7 @@ export enum AnonymizeMethod {
   Last = 'last'        // Reveal only x last characters
 }
 
-/* Method metadata for internal use only
+/* Method metadata exposed for convenience
 */
 export const AnonymizeMethods = [
   {
