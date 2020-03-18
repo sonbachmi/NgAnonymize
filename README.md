@@ -1,8 +1,9 @@
 # NgAnonymize aka ng-anonymize
 Data anonymization library using Angular
 
-View demo at [Official Project Website](https://nganon.bachmi.com)
+> View demo and full documentation at [Official Project Website](https://nganon.bachmi.com)
 
+## Overview
 **Data Anonymization** is the process to encrypt or obfuscate sensitive data into a temporary representation that is unrecognizable from the original data, while still preserving certain statistical characteristics as close to the original as possible. The anonymized dataset can then still be processed as meaningful data, or stored and transmitted safely, without exposing the real data. Data anonymization is aimed to protect personal privacy and is required by certain data protection laws like GDPR.
 
 _NgAnonymize_ is a small Angular 2+ library that offers basic anonymization functions for use in data applications where privacy protection is a concern. It was created as a result of relative few open source solutions that exist for this purpose.
@@ -17,9 +18,9 @@ Initially _NgAnonymize_ offers out of the box four anonymization methods (or alg
 
 - **Last** reveals only the last few characters, masking the rest. Suitable for credit card numbers.
 
-### Get Started
+## Usage
 
-Clone the project from GitHub, or install the NPM module into your Angular application.
+Clone the project from GitHub, or (recommended) install the NPM module into your Angular application.
 
 `npm install ng-anonymize`
 
@@ -65,7 +66,7 @@ You can also use the function programmatically in code:
 
 Either way, you can customize anonymization behavior by passing parameters as follows.
 
-### Reference
+## Reference
 
 The pipe accepts two optional parameters:
 
@@ -87,6 +88,17 @@ The pipe accepts two optional parameters:
 
    -**`type`**: specifies type of the data. Currently only one value is supported: `'phone'` treats input data as phone number and tries to preserve (does not transform) the country code (so it stays as valid data). Currently the logic is very simple and only preserves the first few characters. The default number of characters to keep is hard coded as 3. Todo: smarter anonymization of phone numbers.
 
-This completes the documentation. You can also view source code of the project page including the demo which is part of the project, as an example of how to use the library.
+The library also exposes some data like default settings that are used especially by the demo. You can view source code of the project homepage including the demo, as an example of how to use the library.
 
-Compatibility Notes: Support for Ivy coming soon. For now you likely need to disable Ivy to use the library.
+***
+## Project Structure
+
+The Angular CLI app is configured with two managed projects (look in `angular.json` for configuration)
+ 
+ - Container project presents the project homepage, with demo and documentation
+
+ - Library project resides in independent directory `/projects/ng-anonymize/`. Run `ng build ng-anonymize --prod` to build as publishable NPM module.
+
+## Todos
+- [ ] More anonymization methods
+- [ ] Support for Ivy. For now you likely need to disable Ivy to use the library.
