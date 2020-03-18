@@ -1,7 +1,7 @@
 # NgAnonymize aka ng-anonymize
 Data anonymization library using Angular
 
-> View demo and full documentation at [Official Project Website](https://nganon.bachmi.com)
+> View demo at [Official Project Website](https://nganon.bachmi.com)
 
 ## Overview
 **Data Anonymization** is the process to encrypt or obfuscate sensitive data into a temporary representation that is unrecognizable from the original data, while still preserving certain statistical characteristics as close to the original as possible. The anonymized dataset can then still be processed as meaningful data, or stored and transmitted safely, without exposing the real data. Data anonymization is aimed to protect personal privacy and is required by certain data protection laws like GDPR.
@@ -97,7 +97,7 @@ The Angular CLI app is configured with two managed projects (look in `angular.js
  
  - Container project presents the project homepage, with demo and documentation
 
- - Library project resides in independent directory `/projects/ng-anonymize/`. Run `ng build ng-anonymize --prod` to build as publishable NPM module.
+ - Library project resides in independent directory `/projects/ng-anonymize/`, publishable as NPM module. You can contribute to the source code here.
 
 ## Todos
 - [ ] More anonymization methods
