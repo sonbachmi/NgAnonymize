@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import {AnonymizeDefaultValues, AnonymizeMethods} from "ng-anonymize";
 import Prism from 'prismjs';
+import {AnonymizeDefaultValues, AnonymizeMethods} from 'ng-anonymize';
 
+// tslint:disable-next-line:no-unused-expression
 Prism;  // Dummy code to prevent tree-shaking
 
 @Component({
