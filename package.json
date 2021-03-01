@@ -36,7 +36,7 @@
     "@angular/platform-browser-dynamic": "^9.0.7",
     "@angular/router": "^9.0.7",
     "ng-anonymize": "^0.1.8",
-    "prismjs": "^1.21.0",
+    "prismjs": "^1.23.0",
     "rxjs": "^6.5.5",
     "tslib": "^1.13.0",
     "zone.js": "^0.10.3"
